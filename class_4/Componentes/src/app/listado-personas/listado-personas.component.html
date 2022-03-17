@@ -1,0 +1,10 @@
+<div>
+    <input type="text" name="nombre" [(ngModel)]="nombre" placeholder="nombre">
+    <button (click)="agregar()">Agregar</button>
+</div>
+<div>
+    <app-item-personas
+        *ngFor="let persona of personas"
+        [persona]="persona"
+    ></app-item-personas>
+</div>
