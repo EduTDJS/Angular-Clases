@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div class="card">
+            <div class="card mt-5">
                 <div class="card-body">
-                    <h3 class="card-title">😔Registro De Gastos</h3>
+                    <h3 class="card-title mb-3">😔Registro De Gastos</h3>
                     <form [formGroup]="this.presupuestoService.form">
                         <div class="mb-3">
                             <label for="monto">Cuenta</label>
@@ -13,9 +13,10 @@
                         </div>
                         <div class="mb-3">
                             <label for="monto">Monto</label>
-                            <input formControlName="amount" class="form-control" id="monto" type="number" placeholder="0.00">
+                            <input formControlName="amount" class="form-control" id="monto" type="number"
+                                placeholder="0.00">
                         </div>
-                    
+
                         <div class="mb-3">
                             <label for="fecha">Fecha</label>
                             <input formControlName="date" class="form-control" id="fecha" type="date">
