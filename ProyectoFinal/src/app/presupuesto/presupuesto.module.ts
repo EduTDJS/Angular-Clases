@@ -8,10 +8,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
-    path: '/gasto', component: GastoComponent
+    path: 'gasto', component: GastoComponent
   },
   {
-    path: '/ingreso', component: IngresoComponent
+    path: 'ingreso', component: IngresoComponent
   },
   {
     path: '**', redirectTo: 'gasto'
