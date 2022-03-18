@@ -3,4 +3,5 @@ export interface Persona{
     nombre: string;
     titulo: string;
     bio: string;
+    fechaRegistro: Date;
 }

@@ -13,7 +13,8 @@ export class PresentacionComponent implements OnInit {
     id:0,
     titulo: '',
     nombre: '',
-    bio: ''
+    bio: '',
+    fechaRegistro: new Date() 
   }
 
   @Output()

@@ -4,24 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormularioComponent } from './formulario/formulario.component';
-import { ListadoComponent } from './listado/listado.component';
-import { PresentacionComponent } from './presentacion/presentacion.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MiPipePipe } from './mi-pipe.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FormularioComponent,
-    ListadoComponent,
-    PresentacionComponent,
-    MiPipePipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],

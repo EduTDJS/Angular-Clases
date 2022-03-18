@@ -40,7 +40,8 @@ public personas: Persona[] = [];
       id: 1,
       nombre: this.nombreFormControl.value,
       titulo: this.tituloFormControl.value,
-      bio: this.bioFormControl.value
+      bio: this.bioFormControl.value,
+      fechaRegistro: new Date()
     })
   }
 
