@@ -9,10 +9,10 @@ import { PresupuestoService } from 'src/app/presupuesto/service/presupuesto.serv
 })
 export class ListadoComponent implements OnInit {
 
-  constructor(private appService: AppService, private presupuestoService: PresupuestoService) { }
+  constructor(public appSrv: AppService, public presupuestoService: PresupuestoService) { }
 
   ngOnInit(): void {
-    
+    console.log(this.appSrv.getTransacciones)
   }
 
 }

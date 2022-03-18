@@ -3,18 +3,29 @@
         <div class="col-12">
             <div class="card mt-5">
                 <div class="card-body">
-                    <h3 class="card-title mb-3">😔Registro De Gastos</h3>
+                    <h3 class="card-title mb-3">💸 Registro De Gasto</h3>
                     <form [formGroup]="this.presupuestoService.form">
+
                         <div class="mb-3">
                             <label for="monto">Cuenta</label>
                             <select formControlName="type" class="form-select">
-                                <option *ngFor="let type of types" value="type">{{type.name}}</option>
+                                <option *ngFor="let type of types" [value]="type">{{type.name}}</option>
                             </select>
                         </div>
+
                         <div class="mb-3">
                             <label for="monto">Monto</label>
-                            <input formControlName="amount" class="form-control" id="monto" type="number"
-                                placeholder="0.00">
+                            <input formControlName="amount" class="form-control" required
+                                [ngClass]="this.presupuestoService.amount?.touched && this.presupuestoService.amount?.errors ? 'is-invalid' : ''"
+                                id="monto" type="number" placeholder="0.00">
+                            <div *ngIf="this.presupuestoService.amount?.touched && this.presupuestoService['amount']errors['required']"
+                                class="invalid-feedback">
+                                Esto es es obligatorio
+                            </div>
+                            <div *ngIf="this.presupuestoService.amount?.touched && this.presupuestoService['amount']errors['min']"
+                                class="invalid-feedback">
+                                El valor de este campo debe ser mayor a 10
+                            </div>
                         </div>
 
                         <div class="mb-3">
@@ -30,4 +41,4 @@
             </div>
         </div>
     </div>
-</div>>
+</div>
